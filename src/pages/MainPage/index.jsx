@@ -9,8 +9,8 @@ import {
 } from "./style";
 
 const MainPage = () => {
-  const numeroTelefone = '5514996634745';
-  const mensagem = 'Oi podemos conversar?';
+  const numeroTelefone = '5514991820623';
+  const mensagem = 'Oi, gostária de saber mais sobre os serviços!';
   const link = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
   return (
     <ContainerMaster>

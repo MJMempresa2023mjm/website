@@ -114,7 +114,7 @@ export const SquadContentRight = styled.div`
   width: 70%;
   height: 80%;
 
-  padding: 5px 20px;
+  padding: 5px 30px;
 
   display: flex;
   flex-direction: column;
@@ -136,17 +136,17 @@ export const SquadContentRight = styled.div`
 export const TitleSquadRight = styled.h1`
   font-size: 1.8rem;
   font-weight: 600;
+  line-height: 35px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 768px) {
-    line-height: 35px;
-    margin-bottom: 40px;
   }
 `;
 
 export const SubTitleSquadRight = styled.h2`
   font-size: 1rem;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 40px;
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;

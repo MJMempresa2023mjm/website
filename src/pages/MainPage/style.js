@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ContainerMaster = styled.div`
   width: 100%;
@@ -65,10 +65,14 @@ export const SubTitleSquad = styled.h2`
   }
 `;
 
-export const ButtonContact = styled.button`
+export const LinkContact = styled.a`
   margin-top: 50px;
   width: 150px;
   height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border: none;
   border-radius: 7px;
@@ -78,6 +82,7 @@ export const ButtonContact = styled.button`
 
   font-weight: 600;
   font-size: 1.1rem;
+  text-decoration: none;
 
   cursor: pointer;
 
@@ -91,12 +96,64 @@ export const ButtonContact = styled.button`
 export const ContainerRight = styled.div`
   width: 50%;
   height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background-image: url("/teste_fabrica.jpg");
+  background-image: url('/teste_fabrica.jpg');
   background-size: cover;
   background-position: center;
 
   @media screen and (max-width: 768px) {
     width: 100%;
   }
+`;
+
+export const SquadContentRight = styled.div`
+  margin-top: 50px;
+  width: 70%;
+  height: 80%;
+
+  padding: 5px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+
+  border-radius: 7px;
+
+  background-color: white;
+  color: #017427;
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    width: 80%;
+    height: 90%;
+  }
+`;
+
+export const TitleSquadRight = styled.h1`
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  @media screen and (max-width: 768px) {
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+`;
+
+export const SubTitleSquadRight = styled.h2`
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 50px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
+export const ParagraphSquadRight = styled.p`
+  font-size: 0.9rem;
+  font-weight: 400;
 `;

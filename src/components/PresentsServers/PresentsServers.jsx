@@ -7,24 +7,36 @@ function PresentsServers() {
   const contentRef = React.useRef();
 
   React.useEffect(() => {
+    const { width } = contentRef.current.getBoundingClientRect();
+    setPosition(-(width * active));
+
     function slideNext() {
       if (active < slides.length - 1) {
         setActive(active + 1);
-        console.log(active);
-      } else if (active >= 2) {
+        console.log(width);
+      } else if (active >= 4) {
+        console.log('ativado');
         setActive(0);
       }
     }
+
+    function slideNextBig() {
+      if (active < 1) {
+        setActive(active + 1);
+      } else {
+        setActive(0);
+      }
+    }
+
     const interval = setInterval(() => {
-      slideNext();
+      if (width < 768) {
+        slideNext();
+      } else {
+        slideNextBig();
+      }
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [active]);
-
-  React.useEffect(() => {
-    const { width } = contentRef.current.getBoundingClientRect();
-    setPosition(-(width * active));
   }, [active]);
 
   const imgSlides = slides.map(({ id, name, image }) => (

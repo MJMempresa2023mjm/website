@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Info,
@@ -9,23 +9,32 @@ import {
   ContactContainer,
   HamburgerMenu,
   ContainerInteration,
-} from "./style";
+} from './style';
 
-import { FaPhone, FaBars, FaX } from "react-icons/fa6";
+import { FaPhone, FaBars, FaX } from 'react-icons/fa6';
 
 export default function Header() {
   const [value, setValue] = React.useState(false);
+  const [click, setClick] = React.useState(null);
+
+  function handleClick(event) {
+    const teste = event;
+    setClick(teste);
+    console.log(click);
+  }
 
   return (
     <Container>
-      <InfoLogo to={"/"}>
-        <Logo src="/logo.svg" alt="logo da marca MJM" />
+      <InfoLogo to={'/'}>
+        <Logo src='/logo.svg' alt='logo da marca MJM' />
       </InfoLogo>
 
       <Info>
-        <InfoLink to={"/"}>Quem somos</InfoLink>
-        <InfoLink to={"/"}>Serviços</InfoLink>
-        <InfoLink to={"/"}>Projetos</InfoLink>
+        <InfoLink onClick={handleClick} to={'/'}>
+          Quem somos
+        </InfoLink>
+        <InfoLink to={'/'}>Serviços</InfoLink>
+        <InfoLink to={'/'}>Projetos</InfoLink>
       </Info>
       <ContactContainer>
         <HamburgerMenu
@@ -34,20 +43,20 @@ export default function Header() {
           }}
         >
           {value ? (
-            <FaX fill="#202020" size={25} />
+            <FaX fill='#202020' size={25} />
           ) : (
-            <FaBars fill="#202020" size={30} />
+            <FaBars fill='#202020' size={30} />
           )}
         </HamburgerMenu>
-        <ContactLink to={"/"}>
-          <FaPhone fill="#202020" size={15} />
+        <ContactLink to={'/'}>
+          <FaPhone fill='#202020' size={15} />
         </ContactLink>
       </ContactContainer>
       {value ? (
         <ContainerInteration>
-          <InfoLink to={"/"}>QUEM SOMOS</InfoLink>
-          <InfoLink to={"/"}>SERVIÇOS</InfoLink>
-          <InfoLink to={"/"}>PROJETOS</InfoLink>
+          <InfoLink to={'/'}>QUEM SOMOS</InfoLink>
+          <InfoLink to={'/'}>SERVIÇOS</InfoLink>
+          <InfoLink to={'/'}>PROJETOS</InfoLink>
         </ContainerInteration>
       ) : null}
     </Container>

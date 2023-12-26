@@ -1,13 +1,22 @@
-import "./App.css";
-import Header from "./components/Header";
-import MainPage from "./pages/MainPage";
+import './App.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Header from './components/Header';
+import MainPage from './pages/MainPage';
+import AboutMore from './pages/AboutMore';
 
 function App() {
   return (
-    <div >
-      <Header/>
-      <MainPage/>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+          <Route path='aboutmore' element={<AboutMore />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

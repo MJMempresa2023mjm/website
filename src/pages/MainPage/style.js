@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
+export const ContainerMega = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const ContainerMaster = styled.div`
   width: 100%;
-  height: 200vh;
-
   display: flex;
 
   @media screen and (max-width: 768px) {
@@ -13,7 +20,7 @@ export const ContainerMaster = styled.div`
 
 export const ContainerLeft = styled.div`
   width: 50%;
-  height: 50%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +102,7 @@ export const LinkContact = styled.a`
 
 export const ContainerRight = styled.div`
   width: 50%;
-  height: 50%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

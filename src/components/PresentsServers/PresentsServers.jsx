@@ -1,6 +1,7 @@
 import React from 'react';
 import { slides } from '../../data/Clients';
 import { ContainerTall, ContainerProtect, Container } from './style';
+
 function PresentsServers() {
   const [active, setActive] = React.useState(0);
   const [position, setPosition] = React.useState(0);
